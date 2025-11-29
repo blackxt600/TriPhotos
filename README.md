@@ -25,21 +25,55 @@ Ce script analyse les photos de votre smartphone et les organise dans des dossie
 
 ## Prérequis
 
-- Python 3.7 ou supérieur
-- Connexion internet (pour le géocodage avec Nominatim)
+Avant d'utiliser ce script, assurez-vous d'avoir :
+
+- **Python 3.7 ou supérieur** installé sur votre système
+  - Pour vérifier : `python --version` ou `python3 --version`
+  - Si Python n'est pas installé, téléchargez-le depuis [python.org](https://www.python.org/downloads/)
+
+- **pip** (gestionnaire de paquets Python, normalement inclus avec Python)
+  - Pour vérifier : `pip --version` ou `pip3 --version`
+
+- **Connexion internet** (nécessaire pour le géocodage avec Nominatim)
 
 ## Installation
 
-1. Clonez ou téléchargez ce projet
+### 1. Cloner ou télécharger le projet
 
-2. Installez les dépendances :
+**Option A : Avec Git**
+```bash
+git clone https://github.com/blackxt600/TriPhotos.git
+cd TriPhotos
+```
+
+**Option B : Téléchargement manuel**
+- Téléchargez le projet depuis [GitHub](https://github.com/blackxt600/TriPhotos)
+- Extrayez l'archive ZIP
+- Ouvrez un terminal dans le dossier extrait
+
+### 2. Installer les dépendances Python
+
 ```bash
 pip install -r requirements.txt
 ```
 
-Les bibliothèques nécessaires sont :
+Ou si vous utilisez `pip3` :
+```bash
+pip3 install -r requirements.txt
+```
+
+**Les bibliothèques installées :**
 - `Pillow` : Lecture des métadonnées EXIF des images
 - `geopy` : Géocodage inverse pour obtenir les noms de villes
+
+### 3. Vérifier l'installation
+
+Pour vérifier que tout est bien installé :
+```bash
+python organize_photos.py --help
+```
+
+Vous devriez voir l'aide du script s'afficher.
 
 ## Configuration
 
